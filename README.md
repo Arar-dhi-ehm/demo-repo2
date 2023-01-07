@@ -1,3 +1,3 @@
-# Demo 2
+# Python Automation Practice
 
-Some text for demo 2
+Automation Demo
