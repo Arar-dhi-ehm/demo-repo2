@@ -64,7 +64,7 @@ def mark_completed():
         # Delete it and then insert it
         listbox_tasks.delete(temp)
         listbox_tasks.insert(temp, temp_marked)
-    except TclError:
+    except tkinter.TclError:
         tkinter.messagebox.showwarning(title="Hi there!", message="Please select a task in the app. "
                                                                   "Then click the \"Mark as done\" button again.")
 
