@@ -39,12 +39,12 @@ num_views = yt.views
 print(f'Views: {num_views:,}')
 
 # # Download the youtube video .mp4 (highest resolution)
-# youtube_dl = yt.streams.get_highest_resolution()
-# youtube_dl.download('/home/renzo/Videos/youtube_downloads')  # Download path
+youtube_dl = yt.streams.get_highest_resolution()
+youtube_dl.download('/home/renzo/Videos/youtube_downloads')  # Download path
 
 # Download youtube mp3
-youtube_dl = yt.streams.get_audio_only()
-youtube_dl.download('/home/renzo/Videos/youtube_downloads')  # Download path
+# youtube_dl = yt.streams.get_audio_only()
+# youtube_dl.download('/home/renzo/Videos/youtube_downloads')  # Download path
 
 # Alert when finished
 pag.alert(text='Download Finished.', title='DONE!', button='OK')
