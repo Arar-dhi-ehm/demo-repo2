@@ -1,11 +1,5 @@
 """
 web_table_extractor.py
-    Capabilities:
-
-    Limitations:
-
-    Improvements:
-
     Prerequisites:
         Install pandas library
         Install lxml library
