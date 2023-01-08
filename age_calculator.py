@@ -76,29 +76,29 @@ def my_comment():
 # Condition for zodiac signs
 def my_zodiac():
     if birth_month == 'January':
-        return 'Your zodiac sign might be Capricorn or Aquarius'
+        return 'Your zodiac sign might be Capricorn or Aquarius.'
     elif birth_month == 'February':
-        return 'Your zodiac sign might be Aquarius or Pisces'
+        return 'Your zodiac sign might be Aquarius or Pisces.'
     elif birth_month == 'March':
-        return 'Your zodiac sign might be Pisces or Aries'
+        return 'Your zodiac sign might be Pisces or Aries.'
     elif birth_month == 'April':
-        return 'Your zodiac sign might be Aries or Taurus'
+        return 'Your zodiac sign might be Aries or Taurus.'
     elif birth_month == 'May':
-        return 'Your zodiac sign might be Taurus or Gemini'
+        return 'Your zodiac sign might be Taurus or Gemini.'
     elif birth_month == 'June':
-        return 'Your zodiac sign might be Gemini or Cancer'
+        return 'Your zodiac sign might be Gemini or Cancer.'
     elif birth_month == 'July':
-        return 'Your zodiac sign might be Cancer or Leo'
+        return 'Your zodiac sign might be Cancer or Leo.'
     elif birth_month == 'August':
-        return 'Your zodiac sign might be Leo or Virgo'
+        return 'Your zodiac sign might be Leo or Virgo.'
     elif birth_month == 'September':
-        return 'Your zodiac sign might be Virgo or Libra'
+        return 'Your zodiac sign might be Virgo or Libra.'
     elif birth_month == 'October':
-        return 'Your zodiac sign might be Libra or Scorpio'
+        return 'Your zodiac sign might be Libra or Scorpio.'
     elif birth_month == 'November':
-        return 'Your zodiac sign might be Scorpio or Sagittarius'
+        return 'Your zodiac sign might be Scorpio or Sagittarius.'
     elif birth_month == 'December':
-        return 'Your zodiac sign might be Sagittarius or Capricorn'
+        return 'Your zodiac sign might be Sagittarius or Capricorn.'
     else:
         return "I can't determine your zodiac sign, but it's okay. You're the one who will create your own destiny."
 
