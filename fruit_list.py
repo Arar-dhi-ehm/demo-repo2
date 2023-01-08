@@ -12,10 +12,13 @@ fruit_list.py
             - So if the user will input a float or integer it will still be added to the list
         - This program is case-sensitive, it will not be able to distinguish 'apple' from 'Apple'.
             - So if the user will input 'apple' and 'Apple', both items will be added in the list
+        - Can't change or update the name of the fruit in the list
+        - Can't delete a fruit in the list
 
     Work To Do:
         - If user will input an integer or float in the list, it must show an error
             - deferred
+        - If the user entered a space, the space will be added into a list as string
 
     Sample of Fruit List:
         fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
