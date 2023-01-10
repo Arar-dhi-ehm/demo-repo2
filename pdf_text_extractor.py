@@ -29,15 +29,22 @@ def open_file():
         filetypes=[('PDF files', '*.pdf')])
     print(filename)
 
+    # Clear the output file text before extraction. 1.0 means from the start.
+    output_file_text.delete('1.0', tkinter.END)
     # Reader Object
     reader = PyPDF2.PdfReader(filename)
     # Extract text from pdf using for loop and show it in the terminal
     for page_number in range(len(reader.pages)):
+        # Get page 1, 2, 3, and so on.
         current_text = reader.pages[page_number].extract_text()
-        print(current_text)
+        # To print in the terminal
+        # print(current_text)
+        # To print on tkinter window. It will print at the end of the printed line because of (END)
+        output_file_text.insert(tkinter.END, current_text)
 
 
 file_name_label = tkinter.Label(window, text='No file selected')
+# Name of text widget
 output_file_text = tkinter.Text(window)
 open_file_text = tkinter.Button(window, text='Open PDF File', command=open_file)
 
