@@ -7,8 +7,11 @@ pdf_text_extractor.py
         It might not be always accurate if there are image or tables and etc.
     Improvements:
         Add a button to copy the converted text
+            - Alert: Copied to clipboard.
         Add a vertical scroll bar [done]
         Add a progress bar using tkinter
+        Save as .txt
+            - Add Save button
     Prerequisite:
         Install pypdf2 package
 """
