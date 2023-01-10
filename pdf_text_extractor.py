@@ -7,6 +7,8 @@ pdf_text_extractor.py
         It might not be always accurate if there are image or tables and etc.
     Improvements:
         Add a button to copy the converted text
+        Add a vertical scroll bar [done]
+        Add a progress bar using tkinter
     Prerequisite:
         Install pypdf2 package
 """
@@ -18,7 +20,6 @@ from tkinter import filedialog
 window = tkinter.Tk()
 window.title('PDF Text Extractor')
 
-
 def open_file():
     # This will store the name of the file that will be opened
     filename = filedialog.askopenfilename(
@@ -29,6 +30,8 @@ def open_file():
         filetypes=[('PDF files', '*.pdf')])
     print(filename)
 
+    # Make the label name the same with file name uploaded
+    file_name_label.configure(text=filename)
     # Clear the output file text before extraction. 1.0 means from the start.
     output_file_text.delete('1.0', tkinter.END)
     # Reader Object
@@ -47,6 +50,12 @@ file_name_label = tkinter.Label(window, text='No file selected')
 # Name of text widget
 output_file_text = tkinter.Text(window)
 open_file_text = tkinter.Button(window, text='Open PDF File', command=open_file)
+
+# Right Scrollbar
+scrollbar_tasks = tkinter.Scrollbar(window)
+scrollbar_tasks.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+output_file_text.config(yscrollcommand=scrollbar_tasks.set)
+scrollbar_tasks.config(command=output_file_text.yview)
 
 # To show in the popup
 file_name_label.pack()
