@@ -54,13 +54,13 @@ open_file_text = tkinter.Button(window, text='Open PDF File', command=open_file)
 # Right Scrollbar
 scrollbar_tasks = tkinter.Scrollbar(window)
 scrollbar_tasks.pack(side=tkinter.RIGHT, fill=tkinter.Y)
-output_file_text.config(yscrollcommand=scrollbar_tasks.set)
+output_file_text.config(yscrollcommand=scrollbar_tasks.set, border=5)
 scrollbar_tasks.config(command=output_file_text.yview)
 
 # To show in the popup
-file_name_label.pack()
-output_file_text.pack()
-open_file_text.pack()
+file_name_label.pack(fill='x', padx=20, pady=3)
+output_file_text.pack(fill='x', padx=20, pady=3)
+open_file_text.pack(fill='x', padx=20, pady=3)
 
 # This will create an infinite loop of the app
 window.mainloop()
