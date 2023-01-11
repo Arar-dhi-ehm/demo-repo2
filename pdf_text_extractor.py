@@ -48,11 +48,15 @@ def open_file():
         # To print on tkinter window. It will print at the end of the printed line because of (END)
         output_file_text.insert(tkinter.END, current_text)
 
+def copy_func():
+    pass
 
 file_name_label = tkinter.Label(window, text='No file selected')
 # Name of text widget
 output_file_text = tkinter.Text(window)
+
 open_file_text = tkinter.Button(window, text='Open PDF File', command=open_file)
+copy_button = tkinter.Button(window, text="Copy to clipboard", width=48, command=copy_func)
 
 # Right Scrollbar
 scrollbar_tasks = tkinter.Scrollbar(window)
@@ -64,6 +68,9 @@ scrollbar_tasks.config(command=output_file_text.yview)
 file_name_label.pack(fill='x', padx=20, pady=3)
 output_file_text.pack(fill='x', padx=20, pady=3)
 open_file_text.pack(fill='x', padx=20, pady=3)
+copy_button.pack(fill='x', padx=20, pady=3)
+
+
 
 # This will create an infinite loop of the app
 window.mainloop()
