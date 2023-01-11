@@ -5,6 +5,7 @@ create_folders.py
     Limitations:
         Can't create a line for subfolders
         Can't determine which folder is a duplicate
+        Will not overwrite a duplicate folder
     Improvements:
 
     Note:
