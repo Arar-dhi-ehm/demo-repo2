@@ -2,22 +2,19 @@
 pdf_text_extractor.py
     Capabilities:
         Convert pdf to text
+        It can extract a pdf book
+        Save the file as different format
+        Save the file in a specified location
     Limitations:
-        No idea yet if how many pages it can extract
-        It might not be always accurate if there are image or tables and etc.
+        Can't copy tables and images
     Improvements:
-        Add a button to copy the converted text
-            - Alert: Copied to clipboard.
-        Add a vertical scroll bar [done]
-        Add a progress bar using tkinter
-        Save as .txt
-            - Add Save button
+
     Prerequisite:
         Install pypdf2 package
 """
 import PyPDF2
 import tkinter
-from tkinter import filedialog
+from tkinter import END, filedialog
 
 # This is the window widget (container)
 window = tkinter.Tk()
@@ -48,15 +45,24 @@ def open_file():
         # To print on tkinter window. It will print at the end of the printed line because of (END)
         output_file_text.insert(tkinter.END, current_text)
 
-def copy_func():
-    pass
+def save_text():    
+    try:
+        path = filedialog.asksaveasfile(
+            filetypes = (("Text files", "*.txt"), ('Word Document', '*.docx'), ("All files", "*.*"))).name
+        window.title('Notepad - ' + path)
+    except:
+        return   
+    
+    with open(path, 'w') as f:
+        f.write(output_file_text.get('1.0', END))
 
 file_name_label = tkinter.Label(window, text='No file selected')
 # Name of text widget
 output_file_text = tkinter.Text(window)
 
+# Buttons
 open_file_text = tkinter.Button(window, text='Open PDF File', command=open_file)
-copy_button = tkinter.Button(window, text="Copy to clipboard", width=48, command=copy_func)
+save_button = tkinter.Button(window, text="Save As", command= lambda: save_text())
 
 # Right Scrollbar
 scrollbar_tasks = tkinter.Scrollbar(window)
@@ -68,9 +74,7 @@ scrollbar_tasks.config(command=output_file_text.yview)
 file_name_label.pack(fill='x', padx=20, pady=3)
 output_file_text.pack(fill='x', padx=20, pady=3)
 open_file_text.pack(fill='x', padx=20, pady=3)
-copy_button.pack(fill='x', padx=20, pady=3)
-
-
+save_button.pack(fill='x', padx=20, pady=3)
 
 # This will create an infinite loop of the app
 window.mainloop()
