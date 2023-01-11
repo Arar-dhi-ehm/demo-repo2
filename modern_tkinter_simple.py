@@ -37,7 +37,7 @@ button_1 = customtkinter.CTkButton(master=frame, command=button_callback)
 button_1.pack(pady=12, padx=10)
 
 slider_1 = customtkinter.CTkSlider(master=frame, command=slider_callback, from_=0, to=1)
-button_1.pack(pady=12, padx=10)
+slider_1.pack(pady=12, padx=10)
 
 entry_1 = customtkinter.CTkEntry(master=frame, placeholder_text='Text Entry')
 entry_1.pack(pady=12, padx=10)
