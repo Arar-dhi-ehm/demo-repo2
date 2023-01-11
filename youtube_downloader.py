@@ -1,6 +1,7 @@
 """
 youtube_downloader.py
     Capabilities:
+        Can download videos or music with more than 1 hour playing time 
         Download youtube videos one at a time
         Download youtube sound only but still mp4 format
         Download youtube and convert into mp4
@@ -11,6 +12,7 @@ youtube_downloader.py
         No progress of download yet. Just an alert for now
         If the file is already downloaded, it will just overwrite the previous
             downloaded file.
+        The file might get corrupted if there's an internet connection issue. Not tested yet.
     Prerequisites:
         Install pytube library
     Improvement:
@@ -38,7 +40,9 @@ print('Title: ', yt.title)
 num_views = yt.views
 print(f'Views: {num_views:,}')
 
-# # Download the youtube video .mp4 (highest resolution)
+print('\nDownload in progress. Please wait...\n')
+
+# Download the youtube video .mp4 (highest resolution)
 youtube_dl = yt.streams.get_highest_resolution()
 youtube_dl.download('/home/renzo/Videos/youtube_downloads')  # Download path
 
