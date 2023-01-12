@@ -20,7 +20,7 @@ class MyGUI(QMainWindow):
     # Load the UI
     def __init__(self):
         super(MyGUI, self).__init__()
-        uic.loadUi('bulk_gui.ui', self)
+        uic.loadUi('rename_app_src/bulk_gui.ui', self)
         self.show()
 
         # Define default values
@@ -34,7 +34,7 @@ class MyGUI(QMainWindow):
 
         # Connect options and buttons to its functions
         self.action_open_directory.triggered.connect(self.load_directory)
-        self.filter_button.clicked.connect(self.rename_files)
+        self.filter_button.clicked.connect(self.filter_list)
         self.select_button.clicked.connect(self.choose_selection)
         self.remove_button.clicked.connect(self.remove_selection)
         self.apply_button.clicked.connect(self.rename_files)
@@ -61,11 +61,12 @@ class MyGUI(QMainWindow):
                 if file_name.startswith(self.name_edit.text()):
                     # Rename the current file name using index slicing
                     os.rename(os.path.join(self.directory, file_name),
-                              os.path.join(self.directory, self.file_name[len(self.name_edit.text()):]))
+                              os.path.join(self.directory, file_name[len(self.name_edit.text()):]))
             elif self.add_suffix.isChecked():
                 file_type = file_name.split('.')[-1]
                 os.rename(os.path.join(self.directory, file_name),
-                          os.path.join(self.directory, file_name + self.name_edit.text() + '.' + file_type))
+                          os.path.join(self.directory, file_name[:-(len(file_type) + 1)] + self.name_edit.text() 
+                          + '.' + file_type))
             elif self.remove_suffix.isChecked():
                 file_type = file_name.split('.')[-1]
                 if file_name.endswith(self.name_edit.text() + '.' + file_type):
