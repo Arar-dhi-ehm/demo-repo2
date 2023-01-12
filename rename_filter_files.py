@@ -29,13 +29,13 @@ def rename_files(directory, ending, new_name):
                 counter += 1
 
 """File Types for Filter:
-Document - docx, pdf, txt, pptx, ppt
+Document - docx, pdf, txt, pptx, ppt, ods, odt,
 Spreadsheet - xlsx, xls, 
 Image - png, jpg, jpeg
 Other - rar, deb, zip, 7z
 
 """
 # Call the rename_files function but only rename files ending with this format. ending='file_type'
-rename_files('/home/renzo/Documents/rename_prac_folder','_' ,'my_new_name')
+rename_files('/home/renzo/Documents/rename_prac_folder','pdf' ,'my_new_name')
 
 print('\nRenaming files successful!\n')
