@@ -5,38 +5,11 @@ time_till_deadline.py
         Countdown App
         Shows time remaining from current day to deadline
         Accept user input of goal and deadline
-
-
     Limitations:
         One at a time input
         The program will not save the user input in a list.
             If the user input another goal or task. The program will not remember the previous goal/task.
         Will only show days and hours
-        
-    Improvements:
-        Ambiguous output
-            [done] How can the user know what to type?
-                - Give an example: Task:MM.DD.YYYY
-            [done] Improve the grammatical output
-                Hi, there are {days} days remaining to finish {goal}.
-            Insert an if else message:
-                If the user is 1 hour near deadline. "Are you finished? If not, focus! You can finish it!"
-        Handle Errors:
-            IndexError
-                - if the user entered integer or float it will show this
-                    - Please type a valid input format like this 'Gaol:DD.MM.YYYY'
-            [done] When user input a space for the date, it shows Error.
-                - Try to put as strip for excluding spaces
-            ValueError
-        Make a while with exit function
-        [done] Add current date and deadline
-            Show only date not time
-        [done] Show calculation of months, weeks, year(if year, use if condition)
-        [done] Convert exact date(2022-12-27 14:04:43.335977) into word(December 27, 2022)
-
-    Pros:
-        By using this, the user will have an idea on how many days a project should be done.
-        The user can assess the risks of a project and will be able to plan ahead of time.
 """
 
 from datetime import datetime
