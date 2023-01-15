@@ -6,20 +6,26 @@ import subprocess
 
 # Seeing if the file exists
 if os.path.exists(sys.argv[1]):
-    f = open(sys.argv[1], "r")
-    f_contents = f.read()
-    f.close()
+    file = open(sys.argv[1], "r")
+    file_contents = file.read()
+    file.close()
 else:
-    print("Usage: copy2clip <file_name>")
+    print("Usage: copytoclipboard <file_name>")
     exit(1)
 
 whatos = platform.system()
 
-if whatos == "Darwin":
-    subprocess.run("pbcopy", universal_newlines=True, input=f_contents)
-    print("success: copied to clipboard")
-elif whatos == "Windows":
-    subprocess.run("clip", universal_newlines=True, input=f_contents)
-    print("success: copied to clipboard")
-else:
-    print("failed: clipboard not supported")
+try:
+    if whatos == "Linux":
+        subprocess.run("xclip", universal_newlines=True, input=file_contents) # copy to clipboard not yet working
+        print("success: copied to clipboard")
+    elif whatos == "Windows":
+        subprocess.run("clip", universal_newlines=True, input=file_contents)
+        print("success: copied to clipboard")
+    elif whatos == "Windows":
+        subprocess.run("pbcopy", universal_newlines=True, input=file_contents)
+        print("success: copied to clipboard")
+    # else:
+    #     print("failed: clipboard not supported")
+except Exception as e:
+    print(e)
