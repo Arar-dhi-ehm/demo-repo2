@@ -65,11 +65,11 @@ phonetics = {
 try:
     sys.argv[1]
 except:
-    print("Usage: phonetics.py <word>")
+    print("Usage: phonetics.py <word> or phonetics.py '<word> <word> <word>'")
     exit(1)
 
 for letter in sys.argv[1]:
-    if letter.lower() not in phonetics:
-        print(letter)
+    if letter not in phonetics:
+        print(f' "{letter}" is not in the dictionary.')
     else:
-        print(phonetics[letter])
+        print(f'  {phonetics[letter][0]} - {phonetics[letter]}')
