@@ -22,7 +22,7 @@ try:
     elif whatos == "Windows":
         subprocess.run("clip", universal_newlines=True, input=file_contents)
         print("success: copied to clipboard")
-    elif whatos == "Windows":
+    elif whatos == "Darwin":
         subprocess.run("pbcopy", universal_newlines=True, input=file_contents)
         print("success: copied to clipboard")
     # else:
