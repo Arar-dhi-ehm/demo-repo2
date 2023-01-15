@@ -1,8 +1,11 @@
 """
     Capabilities:
-        Calculate muliple numbers up to 99 using the same operators
+        Calculate multiple numbers up to 99 using the same operators
+        Calculate numbers using addition, subtraction, multiplication, division, modulo, and exponent
     Limitations:
         Can't use multiple operators at the same time
+    Improvement:
+        The '*' in multiplication and '**' in exponent is not working
 """
 
 # import math
@@ -48,5 +51,4 @@ else:
     print("Usage: quickmath.py <add|mul|div|sub|avg|pow> <num01> <num02> [num03..num99]")
     exit(1)
 
-# print(str(result))
 print(f'\nResult: {result:,}\n')
