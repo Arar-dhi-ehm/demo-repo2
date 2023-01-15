@@ -1,7 +1,11 @@
 """
     Capabilities:
         Generate fake data
+        Generate a localized fake data
         Useful for filling out forms using fake data
+        Useful for volume tests
+    Limitations:
+        
     Prerequisites:
         pip install Faker
 """
