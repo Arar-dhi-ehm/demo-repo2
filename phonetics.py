@@ -69,7 +69,7 @@ except:
     exit(1)
 
 for letter in sys.argv[1]:
-    if letter not in phonetics:
-        print(f' "{letter}" is not in the dictionary.')
+    if letter.lower() not in phonetics:
+        print(letter)
     else:
         print(f'  {phonetics[letter][0]} - {phonetics[letter]}')
