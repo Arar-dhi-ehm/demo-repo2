@@ -32,13 +32,40 @@ phonetics = {
     'w': 'whiskey',
     'x': 'x-ray',
     'y': 'yankee',
-    'z': 'zulu'
+    'z': 'zulu',
+
+    'A': 'Alpha',
+    'B': 'Bravo',
+    'C': 'Charlie',
+    'D': 'Delta',
+    'E': 'Echo',
+    'F': 'Foxtrot',
+    'G': 'Golf',
+    'H': 'Hotel',
+    'I': 'India',
+    'J': 'Juliet',
+    'K': 'Kilo',
+    'L': 'Lima',
+    'M': 'Mike',
+    'N': 'November',
+    'O': 'Oscar',
+    'P': 'Papa',
+    'Q': 'Quebec',
+    'R': 'Romeo',
+    'S': 'Sierra',
+    'T': 'Tango',
+    'U': 'Uniform',
+    'V': 'Victor',
+    'W': 'Whiskey',
+    'X': 'X-Ray',
+    'Y': 'Yankee',
+    'Z': 'Zulu'
 }
 
 try:
     sys.argv[1]
 except:
-    print("Usage: natoalphabet.py <word>")
+    print("Usage: phonetics.py <word>")
     exit(1)
 
 for letter in sys.argv[1]:
