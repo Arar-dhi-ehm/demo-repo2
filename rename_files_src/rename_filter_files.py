@@ -2,7 +2,7 @@
 rename_files.py
     Capabilities:
         Will start the count on whatever files is in the index 0
-        Filter by ending
+        Filter by file type
     Limitations:
         If the user will run this program twice, the renamed file might be renamed different from previous
         No exception for files only filter
