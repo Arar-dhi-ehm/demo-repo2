@@ -1,13 +1,17 @@
 """
-rename_files.py
+rename_app.py
     Capabilities:
-        
+        Rename files in bulk
+        Add and remove specified prefix
+        Add and remove specified suffix
+        Use new name for files
     Limitations:
         
     Improvements:
 
     Prerequisite:
-        Install pyqt5
+        Install pyqt5 package
+        Create GUI using Qt Designer app
 """
 import os  # For the rename function
 import re  # For filtering a certain pattern (Regex)
