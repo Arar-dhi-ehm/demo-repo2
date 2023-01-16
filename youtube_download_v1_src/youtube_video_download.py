@@ -1,7 +1,7 @@
 """
 youtube_video_download.py
     Capabilities:
-        Can download videos or music with more than 1 hour playing time 
+        Can download videos with more than 1 hour playing time 
         Download youtube videos
         Download youtube and convert into mp4
         Save downloaded file to specified folder
