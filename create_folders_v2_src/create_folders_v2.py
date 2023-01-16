@@ -25,8 +25,10 @@ workbook = openpyxl.load_workbook(spreadsheet_data)
 sheet = workbook['Sheet1']
 
 column_values = [(cell.value for col in sheet.iter_cols(
-                min_row=2, max_row=None,min_col=1, max_col=1) for cell in col), (cell.value for col in sheet.iter_cols(
-                min_row=2, max_row=None,min_col=2, max_col=2) for cell in col), (cell.value for col in sheet.iter_cols(
+                min_row=2, max_row=None,min_col=1, max_col=1) for cell in col), 
+                (cell.value for col in sheet.iter_cols(
+                min_row=2, max_row=None,min_col=2, max_col=2) for cell in col), 
+                (cell.value for col in sheet.iter_cols(
                 min_row=2, max_row=None,min_col=3, max_col=3) for cell in col)
                 ]
 
