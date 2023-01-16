@@ -1,5 +1,5 @@
 """
-rename_files.py
+rename_fil-re_files.py
     Capabilities:
         Will start the count on whatever files is in the index 0
         Filter files that contains this pattern, then rename
@@ -23,7 +23,7 @@ def rename_files(directory, pattern, new_name):
             if re.match(pattern, file):
             # Extract the file type and keep the file format (Ex. .txt)
                 file_type = file.split('.')[-1]
-            # Get a path and turn it into another path
+                # Get a path and turn it into another path
                 os.rename(f'{directory}/{file}', f'{directory}/{new_name}_{str(counter)}.{file_type}')
                 print(f'Renaming {file} to {new_name}_{str(counter)}.{file_type}' )
                 # Increment the file counter
