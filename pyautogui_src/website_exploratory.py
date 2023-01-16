@@ -1,5 +1,5 @@
 """
-login_logout.py
+website_exploratory.py
     Capabilities:
         Can login and logout using pyautogui mouse click and keyboard
 
