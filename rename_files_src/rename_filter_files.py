@@ -1,5 +1,5 @@
 """
-rename_files.py
+rename_filter_files.py
     Capabilities:
         Will start the count on whatever files is in the index 0
         Filter by file type
