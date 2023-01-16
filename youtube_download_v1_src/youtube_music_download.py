@@ -30,16 +30,14 @@ print(f'Views: {num_views:,}')
 
 print('\nDownload in progress. Please wait...\n')
 
-# Download youtube mp4 but audio only
-youtube_dl = yt.streams.get_audio_only()
-youtube_dl.audio.write_audiofile(youtube_dl[:-4] + ".mp3")
-youtube_dl.close()
-music_dl = youtube_dl.download(download_path)  # Download path
-os.rename(f'{download_path}/{music_dl[:-1]}', f'{download_path}/{music_dl[:-1] + 3}')
-
-# Download youtube mp3 [working]
+# Download youtube mp4 convert to mp3
 # youtube_dl = yt.streams.get_audio_only()
-# youtube_dl.download(download_path)  # Download path
+# music_dl = youtube_dl.download(download_path)  # Download path
+# os.rename(f'{download_path}/{music_dl}', f'{download_path}/{music_dl[:-1] + 3}')
+
+# Download youtube audio [working]
+youtube_dl = yt.streams.get_audio_only()
+youtube_dl.download(download_path)  # Download path
 
 print('\nDownload successful.\n')
 
