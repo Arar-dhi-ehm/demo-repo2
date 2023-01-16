@@ -1,7 +1,11 @@
 """
 website_exploratory.py
     Capabilities:
-        Can login and logout using pyautogui mouse click and keyboard
+        Perform a recording of mouse and keyboard using pyautogui
+        Fill forms
+        Choose options
+        Open specified websites
+        Perform online search
 
     Limitations:
         If the coordinates changed, the script needs to be modified as well.
@@ -15,10 +19,10 @@ website_exploratory.py
         secret_sauce
 """
 
-import pyautogui as pag
-import random
-import time
-import webbrowser
+import pyautogui as pag  # For mouse and keyboard
+import random  # Give random number
+import time  # For letting the program sleep in a specified time
+import webbrowser  # For opening a specified website using default browser
 
 #################[ Tab 1 ]################# [Login]
 webbrowser.open('https://www.saucedemo.com/')
@@ -227,6 +231,7 @@ pag.typewrite('Juan')
 pag.press('tab')
 pag.typewrite('Dela Cruz')
 pag.press('tab')
+# Create a random number from 2020 up to 2380
 random_number = random.randint(2020,2380)
 pag.typewrite(str(random_number))
 
