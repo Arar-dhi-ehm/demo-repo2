@@ -31,10 +31,10 @@ def rename_files(directory, pattern, new_name):
 
 # Filter 1: Call the rename_files function but only rename files with the specified pattern. 
 # Dot '.' means any letter. Star Expression '*' means unpack everything
-# rename_files('/home/renzo/Documents/rename_prac_folder', 'my.*', 'success')
+rename_files('/home/renzo/Documents/rename_prac_folder', 'my.*', 'success')
 
 # Filter 2: Rename files that has a number in its filename
 # Whatever '.', how many times you want '*', has [0-9] number at the end
-rename_files('/home/renzo/Documents/rename_prac_folder', '.*[0-9].*', 'number')
+# rename_files('/home/renzo/Documents/rename_prac_folder', '.*[0-9].*', 'number')
 
 print('\nRenaming files successful!\n')

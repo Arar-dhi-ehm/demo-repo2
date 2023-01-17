@@ -36,6 +36,6 @@ Other - rar, deb, zip, 7z
 
 """
 # Call the rename_files function but only rename files ending with this format. ending='file_type'
-rename_files('/home/renzo/Documents/rename_prac_folder','pdf' ,'my_new_name')
+rename_files('/home/renzo/Documents/rename_prac_folder','pdf' ,'pdf_rename_file')
 
 print('\nRenaming files successful!\n')
