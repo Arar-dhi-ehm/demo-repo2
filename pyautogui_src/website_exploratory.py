@@ -25,6 +25,7 @@ import time  # For letting the program sleep in a specified time
 import webbrowser  # For opening a specified website using default browser
 
 #################[ Tab 1 ]################# [Login]
+pag.FAILSAFE = True
 webbrowser.open('https://www.saucedemo.com/')
 time.sleep(3)
 pag.click(544, 375, 1, button='left', duration=2)
