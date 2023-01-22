@@ -29,12 +29,12 @@ fruits = []
 enter_fruit = ''
 while enter_fruit != 'exit':
 
-    enter_fruit = input('Please enter a fruit name to the list: ')
+    enter_fruit = input('\nPlease enter a fruit name to the list: \n>>> ')
     if enter_fruit != 'exit':
         fruits.append(enter_fruit)
         fruits = list(dict.fromkeys(fruits))  # This will remove duplicates from the list
 
-        print(f'Fruits: {sorted(fruits)}')
-        print(f'There are {len(fruits)} fruits in the list.\n')
+        print(f'\nFruits: {sorted(fruits)}')
+        print(f'There are {len(fruits)} fruits in the list.')
 
 
