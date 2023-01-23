@@ -10,6 +10,7 @@
         
     Improvements:
         If the user just pressed enter in the 'Enter Choice' input, the app will crash
+        Try to add contructors and destructors
 """
 import math
 
