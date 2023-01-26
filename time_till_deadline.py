@@ -31,8 +31,8 @@ time_till_deadline.py
         Make a while with exit function
         [done] Add current date and deadline
             Show only date not time
-        Show calculation of months, weeks, year(if year, use if condition)
-        Convert exact date(2022-12-27 14:04:43.335977) into word(December 27, 2022)
+        [done] Show calculation of months, weeks, year(if year, use if condition)
+        [done] Convert exact date(2022-12-27 14:04:43.335977) into word(December 27, 2022)
 
     Pros:
         By using this, the user will have an idea on how many days a project should be done.
@@ -42,7 +42,7 @@ time_till_deadline.py
 from datetime import datetime
 
 # Input format: task:mm.dd.yyyy
-print('\nInput Format: Goal:DD.MM.YYYY\nExample: Learn Python:01.25.2023')
+print('\nInput Format: Goal:DD.MM.YYYY\nExample: Presentation:02.15.2023')
 user_input = input("\nEnter your goal and deadline:  ")
 input_list = user_input.split(":")
 
@@ -59,12 +59,15 @@ remaining_time = deadline_date - today_date
 # Calculate the remaining hours and remove the float by using int casting.
 remaining_hours = int(remaining_time.total_seconds() / 60 / 60)
 
-# Date Today: and Deadline:
-print(f"Date Today: {today_date.date()}\nDeadline: {deadline_date.date()}")
+# Date Today and Deadline:
+x = today_date; today = x.strftime('%B %d, %Y')
+y = deadline_date; convert_deadline = y.strftime('%B %d, %Y')
+print(f"Date Today: {today}")
+print(f"Deadline: {convert_deadline}")
 
 print(f"\nGoal: {goal.strip()}")
 
-#  remaining_time.days will only show the date not the hours.
+# remaining_time.days will only show the date not the hours.
 print(f"\tTime remaining: {remaining_time.days:,} days.")
 
 # Calculate the remaining hours and remove the float by using int casting.
