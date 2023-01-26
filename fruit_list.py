@@ -27,10 +27,10 @@ fruit_list.py
 
 fruits = []
 enter_fruit = ''
-while enter_fruit != 'exit':
+while enter_fruit != 'exit' and enter_fruit != 'EXIT':
 
     enter_fruit = input('\nPlease enter a fruit name to the list: \n>>> ')
-    if enter_fruit != 'exit':
+    if enter_fruit != 'exit' and enter_fruit != 'EXIT':
         fruits.append(enter_fruit)
         fruits = list(dict.fromkeys(fruits))  # This will remove duplicates from the list
 
