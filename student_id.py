@@ -1,11 +1,15 @@
-"""This is an example of set data type"""
+"""This is an example of set data type
+
+It will remove all the duplicates
+If set element is string it will change position when printed
+"""
 
 # Create a set of integer type
-student_id = {112, 114, 116, 118, 115}
+student_id = {112, 114, 116, 118, 115, 112, 114}
 print('Student ID:', student_id)
 
-# Create a set of string type
-vowel_letters = {'a', 'e', 'i', 'o', 'u'}
+# Create a set of string type. 
+vowel_letters = {'a', 'e', 'i', 'o', 'u', 'e'}
 print('Vowel Letters:', vowel_letters)
 
 # Create a set of mixed data types
