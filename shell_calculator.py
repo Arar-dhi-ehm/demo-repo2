@@ -1,8 +1,8 @@
-"""
-shell_calculator.py
+"""shell_calculator.py
     Capabilities:
         Can do simple calculator tasks
         Will keep on asking if the user will input invalid data
+        Print exponent as superscript. Example Solution: 3⁵ = 243
 
     Limitations:
         One calculation at a time
@@ -11,7 +11,7 @@ shell_calculator.py
     Improvements:
         If the user just pressed enter in the 'Enter Choice' input, the app will crash
 """
-
+import math
 
 def add(x, y):
     return x + y
@@ -33,20 +33,33 @@ def remainder(x, y):
     return x % y
 
 
+# Function to convert to superscript
+def get_super(convert):
+    normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-=()"
+    superscript = "ᴬᴮᶜᴰᴱᶠᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾQᴿˢᵀᵁⱽᵂˣʸᶻᵃᵇᶜᵈᵉᶠᵍʰᶦʲᵏˡᵐⁿᵒᵖ۹ʳˢᵗᵘᵛʷˣʸᶻ⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾"
+    res = convert.maketrans(''.join(normal), ''.join(superscript))
+    return convert.translate(res)
+
+
+def power(x, y):
+    return math.trunc(math.pow(x, y))
+
+
 print('\nSelect Operation')
 print('1. Add')
 print('2. Subtract')
 print('3. Multiply')
 print('4. Divide')
-print('5. Modulus\n')
+print('5. Modulus')
+print('6. Power\n')
 
 
 while True:
     # Take input from the user
-    choice = input('Enter choice (1/2/3/4/5): ')
+    choice = input('Enter choice (1/2/3/4/5/6): ')
 
     # Check if choice is one of the 5 options
-    if choice in ('1', '2', '3', '4', '5'):
+    if choice in ('1', '2', '3', '4', '5', '6',):
         num1 = float(input('\tEnter first number: '))
         num2 = float(input('\tEnter second number: '))
 
@@ -64,6 +77,10 @@ while True:
 
         elif choice == '5':
             print(f'\tSolution: {num1:,} % {num2:,} = {remainder(num1, num2):,}\n')
+        
+        elif choice == '6':
+            # Print the power value (num2) as superscript
+            print(f'\tSolution: {math.trunc(num1)}{get_super(str(math.trunc(num2)))} = {power(num1, num2):,}\n')
 
         # Check if the user wants another calculation. If 'no', break the loop.
         next_calculation = input("Let's do next calculation? (yes/no): ")
@@ -78,4 +95,5 @@ while True:
         print('3. Multiply')
         print('4. Divide')
         print('5. Modulus')
-        print('\nInvalid Input: Please enter one of the choices: 1,2,3,4, or 5 only.\n')
+        print('6. Power')
+        print('\nInvalid Input: Please enter one of the choices: 1,2,3,4,5, or 6 only.\n')
