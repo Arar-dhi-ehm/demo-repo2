@@ -1,0 +1,14 @@
+# Define a class
+class Bike:
+    name = ""
+    gear = 0
+
+
+# Create object of class
+bike1 = Bike()
+
+# Access attributes and assign new values
+bike1.gear = 11
+bike1.name = "Mountain Bike"
+
+print(f"Name: {bike1.name}, Gears: {bike1.gear} ")
