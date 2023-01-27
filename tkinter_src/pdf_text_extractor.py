@@ -2,7 +2,7 @@
 pdf_text_extractor.py
     Capabilities:
         Convert pdf to text
-        It can extract a pdf book
+        It can extract a pdf book or pdf document
         Save the file as different format
         Save the file in a specified location
     Limitations:
@@ -25,7 +25,7 @@ def open_file():
     filename = filedialog.askopenfilename(
         title='Open PDF File',
         # Will open a file dialogue in this directory
-        initialdir='/home/renzo/Documents/automation_scripts/automation_project/extract_pdf_text',
+        initialdir='/home/arar/Books/',
         # It will show any(*) files that ends with .pdf
         filetypes=[('PDF files', '*.pdf')])
     print(filename)
@@ -40,8 +40,6 @@ def open_file():
     for page_number in range(len(reader.pages)):
         # Get page 1, 2, 3, and so on.
         current_text = reader.pages[page_number].extract_text()
-        # To print in the terminal
-        # print(current_text)
         # To print on tkinter window. It will print at the end of the printed line because of (END)
         output_file_text.insert(tkinter.END, current_text)
 
