@@ -11,7 +11,7 @@ class Employee:
         self.email = f'{first}.{last}@fpt.com'
         self.pay = pay
 
-        Employee.num_of_emps += 1  # num_of_emps = num_of_emps + 1
+        Employee.num_of_emps += 1
 
     # Create method to get employee Full Name
     def full_name(self):
