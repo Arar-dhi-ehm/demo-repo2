@@ -1,5 +1,6 @@
 """
     Capabilities:
+        Make this an alias in Linux Terminal
         Calculate multiple numbers up to 99 using the same operators
         Calculate numbers using addition, subtraction, multiplication, division, modulo, and exponent
     Limitations:
