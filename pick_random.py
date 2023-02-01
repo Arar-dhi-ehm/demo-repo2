@@ -1,3 +1,8 @@
+"""Sample for random module
+    Pick random number
+    Pick random person
+"""
+
 import random
 
 # Pick random number
