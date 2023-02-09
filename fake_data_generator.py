@@ -22,6 +22,8 @@ fake = Faker(['it_IT', 'en_US', 'en_CA', 'en_PH'])  # Localization
 for _ in range(10):
     print(f'\nName: {fake.name()}')
     print(f'Phone Number: {fake.phone_number()}')
+    fake_email = fake.email()
+    print(f'Email: {fake_email}')
     print(f'Address: {fake.address()}')
     print(f'Job: {fake.job()}')
     print(f'Company: {fake.company()}')
