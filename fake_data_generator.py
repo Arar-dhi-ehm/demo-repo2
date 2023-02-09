@@ -20,11 +20,10 @@ fake = Faker()
 from faker import Faker
 fake = Faker(['it_IT', 'en_US', 'en_CA', 'en_PH'])  # Localization
 
-full_name = fake.name()
-first_name, last_name = full_name.split(" ")
-fake_email = f"{first_name.lower()}.{last_name.lower()}@samplemail.ph"
-
 for _ in range(10):
+    full_name = fake.name()
+    first_name, last_name = full_name.split(" ")
+    fake_email = f"{first_name.lower()}.{last_name.lower()}@samplemail.ph"
     print(f'\nFull Name: {full_name}')
     print(f'Email: {fake_email}')
     print(f'Phone Number: {fake.phone_number()}')
