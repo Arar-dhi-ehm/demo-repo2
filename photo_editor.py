@@ -1,9 +1,4 @@
-"""
-photo_editor.py
-    Capabilities:
-
-    Limitations:
-
+"""photo_editor.py
 """
 
 import os
