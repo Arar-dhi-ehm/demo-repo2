@@ -1,11 +1,5 @@
 """
 pdf_merger.py
-    Capabilities:
-
-    Limitations:
-
-    Improvements:
-
     Prerequisite:
         Install pypdf2 package
 """
