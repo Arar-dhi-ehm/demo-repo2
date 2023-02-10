@@ -1,6 +1,7 @@
 """
 phonetics.py
     Capabilities:
+        Make this an alias in Linux Shell
         Show phonetics of a word. You can use this if you are on a phone call.
 """
 
