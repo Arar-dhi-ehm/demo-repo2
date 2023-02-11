@@ -6,24 +6,8 @@ youtube_downloader.py
         Download youtube sound only but still mp4 format
         Download youtube and convert into mp4
         Save downloaded file to specified folder
-    Limitations:
-        Can't download in bulk.
-            - to do this, we might need to use a condition
-        No progress of download yet. Just an alert for now
-        If the file is already downloaded, it will just overwrite the previous
-            downloaded file.
-        The file might get corrupted if there's an internet connection issue. Not tested yet.
     Prerequisites:
         Install pytube library
-    Improvement:
-        Use a user input for the youtube link
-            or create a tkinter GUI
-        Add download progress
-        Change the format of mp4 to mp3 when download is for music/no video
-    Pros:
-        Idea:
-            Download favorite songs in bulk using URL in a spreadsheet [Not Implemented Yet]
-
 """
 
 from pytube import YouTube
