@@ -5,9 +5,6 @@ get_coordinate.py
         
     Prerequisites:
         The user needs to download and install pyautogui package
-
-    Improvement:
-        Use pyperclip module to copy the x and y coordinate [trivial]
 """
 
 
